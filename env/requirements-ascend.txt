@@ -1,0 +1,6 @@
+# 昇腾相关依赖（示例占位，请根据实际源与版本调整）
+# torch_npu 需要匹配 CANN 版本；可使用华为镜像源。
+torch==2.1.0
+torch_npu==2.1.0
+torchvision==0.16.0
+opt_einsum

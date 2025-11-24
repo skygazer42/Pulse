@@ -1,0 +1,4 @@
+# 通用 CUDA GPU 依赖（示例，占位）
+torch==2.1.0
+torchvision==0.16.0
+opt_einsum

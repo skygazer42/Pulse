@@ -1,0 +1,10 @@
+# 通用依赖；与硬件无关
+wheel
+setuptools>=68
+numpy>=1.24
+transformers>=4.38.0
+datasets>=2.18.0
+accelerate>=0.28.0
+rich
+pyyaml
+requests

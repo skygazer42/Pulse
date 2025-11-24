@@ -1,0 +1,5 @@
+# 摩尔线程 GPU 依赖（示例占位）
+torch==2.1.0
+torch_mthreads==2.1.0
+torchvision==0.16.0
+opt_einsum

@@ -1,0 +1,26 @@
+# 昇腾 910B 推理示例配置（占位）
+hardware:
+  device: ascend
+  rank_size: 1
+  mixed_precision: bf16
+  cann_version: "8.x"
+
+model:
+  name: qwen1.5-1.8b
+  dtype: bf16
+  max_length: 1024
+  quantization: none
+
+runtime:
+  batch_size: 4
+  num_workers: 4
+  graph_mode: true
+  static_input: false
+
+paths:
+  weights: /data/models/qwen1.5-1.8b
+  tokenizer: /data/models/qwen1.5-1.8b
+
+logging:
+  save_dir: runs/ascend
+  log_interval: 10

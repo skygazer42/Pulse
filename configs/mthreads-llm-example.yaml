@@ -1,0 +1,27 @@
+# 摩尔线程 S4000 训练示例配置（占位）
+hardware:
+  device: mthreads
+  rank_size: 1
+  mixed_precision: fp16
+  mt_hip_version: "2.x"
+
+model:
+  name: qwen1.5-1.8b
+  dtype: fp16
+  max_length: 1024
+  quantization: none
+
+runtime:
+  batch_size: 8
+  num_workers: 4
+  gradient_checkpointing: true
+  flash_attention: true
+
+paths:
+  weights: /data/models/qwen1.5-1.8b
+  tokenizer: /data/models/qwen1.5-1.8b
+  dataset: /data/datasets/sample.jsonl
+
+logging:
+  save_dir: runs/mthreads
+  log_interval: 10
