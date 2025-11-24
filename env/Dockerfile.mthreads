@@ -1,0 +1,17 @@
+# 摩尔线程镜像占位
+FROM ubuntu:22.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 python3-venv python3-pip git wget curl ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# TODO: 安装 MT-HIP 运行时与驱动依赖
+
+WORKDIR /workspace
+COPY env/requirements-base.txt /workspace/
+COPY env/requirements-mthreads.txt /workspace/
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install -r requirements-base.txt -r requirements-mthreads.txt
+
+CMD ["/bin/bash"]

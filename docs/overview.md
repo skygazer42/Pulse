@@ -9,6 +9,7 @@
 - 配置模板：不同硬件的模型/数据/优化参数示例（`configs/`）。
 - 基线记录：吞吐、延迟与系统信息的标准化记录方式（`benchmarks/`）。
 - 最小可运行示例：确保链路贯通的占位代码（`examples/`）。
+- 参考资料汇总：外部文章/报告的链接与摘要（`docs/related-articles.md`）。
 
 ## 使用建议
 1. 按 `docs/deployment-checklist.md` 执行，确认驱动与运行时匹配。
