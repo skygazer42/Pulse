@@ -1,0 +1,102 @@
+
+================================================================================
+=== Basic system info
+================================================================================
+Hostname     : autodl-container-d19d40bcb0-2773985a
+OS           : Linux-5.15.0-25-generic-aarch64-with-glibc2.35
+Machine      : aarch64
+Python exe   : /root/miniconda3/bin/python
+Python ver   : 3.10.8
+
+================================================================================
+=== Ascend NPU (npu-smi)
+================================================================================
+>> npu-smi info
+  +------------------------------------------------------------------------------------------------+
+  | npu-smi 25.2.0                   Version: 25.2.0                                               |
+  +---------------------------+---------------+----------------------------------------------------+
+  | NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|
+  | Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |
+  +===========================+===============+====================================================+
+  | 4     910B2               | OK            | 98.4        45                0    / 0             |
+  | 0                         | 0000:81:00.0  | 0           0    / 0          3404 / 65536         |
+  +===========================+===============+====================================================+
+  +---------------------------+---------------+----------------------------------------------------+
+  | NPU     Chip              | Process id    | Process name             | Process memory(MB)      |
+  +===========================+===============+====================================================+
+  | No running processes found in NPU 4                                                            |
+  +===========================+===============+====================================================+
+
+>> npu-smi info -t board -i 4
+  NPU ID                         : 4
+  	Product Name                   : IT21HMDA_Bin5
+  	Model                          : NA
+  	Manufacturer                   : Huawei
+  	Serial Number                  : 1023C9604487
+  	Software Version               : 25.2.0
+  	Firmware Version               : 7.7.0.6.236
+  	Compatibility                  : OK
+  	Board ID                       : 0x60
+  	PCB ID                         : A
+  	BOM ID                         : 1
+  	PCIe Bus Info                  : 0000:81:00.0
+  	Slot ID                        : 4
+  	Class ID                       : NA
+  	PCI Vendor ID                  : 0x19E5
+  	PCI Device ID                  : 0xD802
+  	Subsystem Vendor ID            : 0x19E5
+  	Subsystem Device ID            : 0x3003
+  	Chip Count                     : 1
+
+================================================================================
+=== CANN / Ascend Toolkit version
+================================================================================
+>> Found CANN version file: /usr/local/Ascend/ascend-toolkit/latest/version.cfg
+  # version: 1.0
+  runtime_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  compiler_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  opp_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  toolkit_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  aoe_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  ncs_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  opp_kernel_running_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  runtime_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  compiler_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  hccl_upgrade_version=[7.7.0.1.238:8.1.RC1]
+  opp_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  toolkit_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  aoe_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  ncs_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  opp_kernel_upgrade_version=[7.1.T11.0.B226:8.0.RC1.alpha001]
+  runtime_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  compiler_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  hccl_installed_version=[7.7.0.1.238:8.1.RC1]
+  opp_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  toolkit_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  aoe_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  ncs_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+  opp_kernel_installed_version=[7.7.0.1.238:8.1.RC1][7.1.T11.0.B226:8.0.RC1.alpha001]
+
+>> Ascend / CANN related packages (rpm / dpkg)
+  ii  libxi6:arm64                         2:1.8-1build1                           arm64        X11 Input extension library
+  ii  mawk                                 1.3.4.20200120-3                        arm64        Pattern scanning and text processing language
+
+================================================================================
+=== Environment variables related to Ascend / CANN / HCCL
+================================================================================
+  ASCEND_AICPU_PATH=/usr/local/Ascend/ascend-toolkit/latest
+  ASCEND_DOCKER_RUNTIME=True
+  ASCEND_HOME_PATH=/usr/local/Ascend/ascend-toolkit/latest
+  ASCEND_OPP_PATH=/usr/local/Ascend/ascend-toolkit/latest/opp
+  ASCEND_TOOLKIT_HOME=/usr/local/Ascend/ascend-toolkit/latest
+  ASCEND_VISIBLE_DEVICES=4
+
+================================================================================
+=== Python AI framework versions (MindSpore / torch-npu / etc.)
+================================================================================
+mindspore   : import failed: No module named 'mindspore'
+torch       : 2.5.1
+torch-npu   : 2.5.1
+vllm        : import failed: No module named 'vllm'
+tensorflow  : import failed: No module named 'tensorflow'
+

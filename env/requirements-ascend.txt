@@ -1,6 +1,35 @@
-# 昇腾相关依赖（示例占位，请根据实际源与版本调整）
-# torch_npu 需要匹配 CANN 版本；可使用华为镜像源。
-torch==2.1.0
-torch_npu==2.1.0
-torchvision==0.16.0
+# 昇腾相关依赖（910B2x + 鲲鹏 920 单卡示例）
+# 基于 scripts/ascend_env_export.py 在实际环境中导出的快照（见 env/snapshots/）。
+#
+# 使用建议：
+#   1. 先安装 Ascend 驱动与 CANN（示例环境为 runtime 7.7.0.1.238 / 8.1.RC1）；
+#   2. 按华为官方文档安装匹配版本的 torch / torch-npu；
+#   3. 在虚拟环境中执行：
+#        pip install -r env/requirements-base.txt -r env/requirements-ascend.txt
+#
+# 若在其他 Ascend 版本上使用，可基于 env/snapshots/ 中的导出结果调整版本。
+
+# 核心框架
+torch==2.5.1
+torch-npu==2.5.1
+torchvision==0.20.1
+
+# 大模型 / 训练相关
+accelerate==1.7.0
+transformers==4.51.3
+datasets==3.6.0
+sentencepiece==0.2.0
+safetensors==0.5.3
+peft==0.15.2
+trl==0.9.6
+tiktoken==0.9.0
+
+# 可选：算子优化
 opt_einsum
+
+# Ascend/CANN Python 包（通常由 CANN 安装脚本提供，列在此仅供版本对齐参考）
+# ascendctools==0.1.0
+# hccl==0.1.0
+# msadvisor==1.0.0
+# te==0.4.0
+# 以及 op-compile-tool / op-gen / op-test-frame / opc-tool / schedule-search 等工具包。
